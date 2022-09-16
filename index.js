@@ -177,9 +177,9 @@ function greeting(firstName, lastName){
   
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
- console.log(consume(2, 2, add)); // 4
- console.log(consume(10, 16, multiply)); // 160
- console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+// console.log(consume(2, 2, add)); // 4
+ //console.log(consume(10, 16, multiply)); // 160
+ //console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 
@@ -196,8 +196,10 @@ function greeting(firstName, lastName){
 - Instances of CuboidMaker should initialize `length`, `width` and `height` properties
 */
 
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(props){
+  this.length = props.length;
+  this.width = props.width;
+  this.height = props.height;
 }
 
 
@@ -206,8 +208,13 @@ function CuboidMaker(/*Your Code Here */){
   💡 NOTE: Formula for cuboid volume: length * width * height   
 */
 
+CuboidMaker.prototype.volume = function() {
+  return (this.length * this.width * this.height);
+}
 
-
+const newCuboid = new CuboidMaker({length: 3, width: 3, height: 4});
+console.log(newCuboid);
+console.log(newCuboid.volume());
 
 /* 🐴🐴🐴 Step 3: Surface Area Method 🐴🐴🐴
   Create another method called surfaceArea using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
