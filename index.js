@@ -221,8 +221,11 @@ console.log(newCuboid.volume());
   💡 NOTE: Formula for cuboid surface area: 2 * (length * width + length * height + width * height)  
 */
 
+CuboidMaker.prototype.surfaceArea = function() {
+  return (this.length * this.width + this.length * this.height + this.width * this.height);
+}
 
-
+console.log(newCuboid.surfaceArea());
 
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker (not auto graded)🐴🐴🐴
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
