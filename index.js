@@ -31,10 +31,14 @@ function myFunction() {
 */
 
 function summation(number) {
-  /*Your Code Here*/
-
+  let sum = 0;
+  for (let i = 1; i <= number; i++){
+     sum += i;
+  };
+  return sum;
   }
- 
+  
+  console.log(summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
