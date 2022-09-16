@@ -68,9 +68,7 @@ const zooAnimals = [
    
     return displayNames
   }
-  
-
-  console.log(animalNames(zooAnimals));
+  //console.log(animalNames(zooAnimals));
 
 
   
@@ -85,9 +83,15 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const lowerArray = [];
+    array.forEach(function(element) {
+      lowerArray.push(element['animal_name'].toLowerCase());
+    });
+    return lowerArray;
   }
+    
+console.log(lowerCaseNames(zooAnimals));
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
